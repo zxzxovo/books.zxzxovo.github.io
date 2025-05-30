@@ -2,13 +2,11 @@
 #
 # To get started with GitSite see: https://gitsite.org
 
-name: Booooks as GitSite
+name: Deploy GitSite to Pages
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
-  pull_request:
     branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -40,12 +38,9 @@ jobs:
         with:
           node-version: 20
       - name: Install GitSite
-        run:
-          npm install gitsite-cli -g
+        run: npm install gitsite-cli -g
       - name: Build with GitSite
-        run:
-          # set output dir to '_site' for pages jobs:
-          gitsite-cli build -o _site -v
+        run: gitsite-cli build -o _site -v
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload Artifact
@@ -62,4 +57,5 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
