@@ -1,0 +1,64 @@
+site:
+  # set the domain with schema but without trailing slash:
+  domain: https://site.hizhixia.site
+  title: 芷夏BookSite
+  description: 一些适合归类为书籍的文档
+  keywords: gitsite, git, static web site, html
+  theme: default
+  language: zh-CN
+  # set the /<rootPath> pathname under which your site is served
+  # for GitHub pages deployment without a custom domain, it is often '/<projectName>'
+  # root-path: /gitsite
+  # set cdn path:
+  cdn-path: /static
+  navigation:
+    - title: FLTK-rs 文档
+      uri: /books/fltk-rs-book/index.html
+    - title: Tokio 文档
+      uri: /books/tokio-docs/index.html
+    - title: 日志
+      uri: /blogs/all/index.html
+    - title: ZX
+      uri: https://hizhixia.site
+      external: true
+  git:
+    base-url: https://github.com/zxzxovo/site.zxzxovo.github.io/
+  contact:
+    name: "Zhixia Lau"
+    github: https://github.com/zxzxovo
+  books:
+    index-marker: true
+  search:
+    # none = no search
+    # browser = flex search in browser
+    # google = google site search
+    type: browser
+  # control styles:
+  styles:
+    # show 'Edit in Git':
+    display-git-link: false
+    # any custom styles used in theme:
+    # code-font: Monaco
+  # integration:
+  #   comment:
+  #     provider: disqus
+  #     name: gitsite
+  #   analytics:
+  #     provider: google
+  #     gtag: G-5Z40K7NBL5
+  footer: |
+          <div>
+            &copy;<a href="/">hizhixia.site</a> 
+            - <a href="https://github.com/zxzxovo/site.zxzxovo.github.io" target="_blank">GitHub</a>
+            - <a href="/pages/license/index.html" target="_blank">License</a>
+          </div>
+
+
+build:
+  # copy special files under root dir (ignore if not found):
+  copy:
+    - favicon.ico
+    - robots.txt
+    - ads.txt
+
+# you can add any items:
