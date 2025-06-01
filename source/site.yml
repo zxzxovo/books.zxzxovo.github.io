@@ -12,8 +12,6 @@ site:
   # set cdn path:
   cdn-path: /static
   navigation:
-    - title: FLTK-rs 文档
-      uri: /books/fltk-rs-book/index.html
     - title: Tokio 文档
       uri: /books/tokio-docs/index.html
     - title: 日志
@@ -36,7 +34,7 @@ site:
   # control styles:
   styles:
     # show 'Edit in Git':
-    display-git-link: false
+    display-git-link: true
     # any custom styles used in theme:
     # code-font: Monaco
   # integration:
